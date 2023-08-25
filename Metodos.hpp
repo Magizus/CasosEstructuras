@@ -2,7 +2,8 @@
 #include <string>
 using namespace std;
 
-//Lista doble enlazada
+//Lista doble enlazada falta lo de los nodos
+
 
 void Buscar(string nombre){
 /*Entra el nombre y seria pasar por la lista y sacar/imprimir los que tengan lo que ingreso el usuario en el titulo y se le
