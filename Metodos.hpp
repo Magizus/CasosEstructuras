@@ -1,8 +1,29 @@
 #include <iostream>
 #include <string>
+#include "noticias.hpp"
 using namespace std;
 
 //Lista doble enlazada
+
+class lista {
+   public:
+    lista() { primero =  NULL; }
+    
+    void ANI(int v);//ANI = Agregar Noticia Inicio
+    void InsertarPos (int v, int pos);
+    void EliminarPos(int pos);
+    void Imprimir();
+    void Borrar(int v);
+    void Mostrar();
+    void borrarPosicion(int pos);
+    bool ListaVacia() { return primero == NULL; }
+    int Largo();
+
+    private:
+    pnodo primero;
+    pnodo actual;
+    pnodo anterior;
+};
 
 void Buscar(string nombre){
 /*Entra el nombre y seria pasar por la lista y sacar/imprimir los que tengan lo que ingreso el usuario en el titulo y se le
@@ -11,11 +32,17 @@ muestra las que coinciden
 
 }
 
-void AgregarNoticia(){
-/*Ingresar una noticia y simplemente meterla a la lista 
-
-*/
+void lista::ANI(int valor){//Agregar Noticia Inicio
+    if (ListaVacia())
+    {
+    primero = new nodo(valor);
+    }else{
+        nodo* nuevo = new nodo(valor,primero,nullptr);
+        primero -> anterior = nuevo;
+        primero = nuevo;
+    }
 }
+
 
 
 void IngresarEspecifico(string nombre, int posi){
@@ -30,26 +57,35 @@ void Eliminar(string nombre){
 }
 
 
-int Largo(){
-/*Esto me devolveria el largo de la lista que se usa
-*/
+int lista::Largo()
+{
+    int conta = 0;
+    pnodo aux = primero;
+        while (aux!= nullptr){
+            aux = aux->siguiente;
+            conta++;
+        }
 
+    return conta;
 }
 
-void Mostrar(){
-/*Me mostraria toda la lista con el orden de relevancia, y seria mas o menos asi
-NombreNoticia - Visitas 
-*/
-
+void lista::Mostrar()
+{
+nodo *aux;
+if(primero==NULL)
+    cout << "La lista esta vacia";
+else
+{
+    aux=primero;
+    while(aux)
+    {
+        cout << aux->valor<< "elemento";
+        aux = aux->siguiente;
+    }
 }
 
-void getNext(){
-//Para la lista
-
-
 
 }
-
 
 
 

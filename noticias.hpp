@@ -1,6 +1,48 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
+
+   //esto es basado de la donde se saca las noticias que tenian estos campos y todos eran strings 
+
+class nodo { // Constructores
+   public:
+   	
+   	
+nodo(int v)
+    {
+       valor = v;
+       siguiente = NULL;
+       anterior = NULL;
+    }
+
+nodo(int v, nodo  *signodo, nodo *antnodo)
+    {
+       valor = v;
+       siguiente = signodo;
+       anterior = antnodo;
+    }
+
+
+   private:
+    int valor=0;
+    nodo *siguiente;
+    nodo *anterior;
+    
+    /*string id;
+    string nombre;
+    string autor;
+    string titulo;
+    string url;
+    string imagenurl;
+    string fecha;
+    string contenido;
+   */
+        
+   friend class lista;
+};
+
+typedef nodo *pnodo;
 
 
 void EliminarTotal(string nombre){
