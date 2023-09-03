@@ -3,7 +3,8 @@
 #include "noticias.hpp"
 using namespace std;
 
-//Lista doble enlazada
+//Lista doble enlazada falta lo de los nodos
+
 
 class lista {
    public:
