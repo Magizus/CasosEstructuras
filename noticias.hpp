@@ -3,7 +3,7 @@
 
 using namespace std;
 
-   //esto es basado de la donde se saca las noticias que tenian estos campos y todos eran strings 
+
 
 class nodo { // Constructores
    public:
