@@ -15,7 +15,8 @@ nodo(int v)
        valor = v;
        siguiente = NULL;
        anterior = NULL;
-       
+       /*string id; string nombre; string autor; string titulo; string url; string imagenurl; string fecha; string contenido;
+        */
     }
 
 nodo(int v, nodo  *signodo, nodo *antnodo)
@@ -23,6 +24,9 @@ nodo(int v, nodo  *signodo, nodo *antnodo)
        valor = v;
        siguiente = signodo;
        anterior = antnodo;
+
+        /*string id; string nombre; string autor; string titulo; string url; string imagenurl; string fecha; string contenido;
+        */
     }
 
 
@@ -50,7 +54,6 @@ class lista {
     void Buscar(int valor);
     void Eliminar(int v);
     void Mostrar();
-    void borrarPosicion(int posi);
     bool ListaVacia() { return primero == NULL; }
     void Largo();
 

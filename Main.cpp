@@ -19,6 +19,8 @@ Primeralista.ANI(9);
 Primeralista.Mostrar();
 Primeralista.Eliminar(5);
 Primeralista.Mostrar();
+Primeralista.InsertarPos(80,2);
+Primeralista.Mostrar();
 
 
 return 0;
